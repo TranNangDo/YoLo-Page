@@ -44,7 +44,14 @@ list-style-type: none;
 {
    text-decoration: none;
 }
-
+ .nav__icon,
+ .nav__logo,
+ .nav__menu {
+    flex: 1;
+ }
+ .menu_mb-icon {
+   display: none;
+ }
 .nav__logo {
    text-align: center;
 }
@@ -92,6 +99,7 @@ font-weight: 500;
    display: flex;
    width: 100%;
    flex-wrap: wrap;
+   justify-content: space-between;
 }   
 .ab__ship {
    display: flex;
@@ -265,5 +273,16 @@ font-weight: 500;
       color: var(--primary-color);
       transition: 0.3s ease-in-out;
     }
-  }
+
+
+
+
+    
+    @media (max-width :740px) {
+         .nav__menu {
+            
+         }
+       }
+   
+   
   

@@ -7,9 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YoLo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="./css/grid.css">
   <link rel="stylesheet" href="./css/index.css">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -20,6 +21,7 @@
   <section>
     <div class="container">
       <div class="navbar">
+        <div class="menu__mb-icon"><i id="menu-btn" class='menu-icon bx bx-menu'></i></div>
         <div class="nav__menu">
           <ul>
             <li><a href="#">Trang chủ</a></li>
@@ -51,9 +53,9 @@
             sản phẩm thời trang nào. sợ vải pima dài và dày hơn sợi cotton thông thường gấp đôi nhờ công nghệ dệt tân
             tiến. điều đó làm cho kết cấu áo polo chắc chắn, bền chẹt, hạn chết tối đa xù lông mềm mượt bền màu, vô cùng
             đảm bảo sức khỏe người dung</p>
-            <div class="view">
-          <a href="">Xem chi tiết</a>
-        </div>
+          <div class="view">
+            <a href="">Xem chi tiết</a>
+          </div>
         </div>
         <div class="slide__pic l-5 m-5 c-0">
           <img src="./images/slider/slide_1.png" alt="">
@@ -66,40 +68,42 @@
   <section>
     <div class="container">
       <div class="about">
-        <div class="ab__ship l-3 m-6 c-12">
-          <div class="ab__icon l-3">
-            <i class='bx bx-shopping-bag'></i>
+        <div class="row">
+          <div class="ab__ship col l-3 m-6 c-12">
+            <div class="ab__icon l-3">
+              <i class='bx bx-shopping-bag'></i>
+            </div>
+            <div class="ab__text">
+              <h3>Miễn phí giao hàng</h3>
+              <p>Miễn phí ship với đơn hàng > 239k</p>
+            </div>
           </div>
-          <div class="ab__text">
-            <h3>Miễn phí giao hàng</h3>
-            <p>Miễn phí ship với đơn hàng > 239k</p>
+          <div class="ab__pay col l-3 m-6 c-12">
+            <div class="ab__icon l-3">
+              <i class='bx bx-credit-card'></i>
+            </div>
+            <div class="ab__text l-9">
+              <h3>Thanh toán COD</h3>
+              <p>Thanh toán khi nhận hàng (COD)</p>
+            </div>
           </div>
-        </div>
-        <div class="ab__pay l-3 m-6 c-12">
-          <div class="ab__icon l-3">
-            <i class='bx bx-credit-card'></i>
+          <div class="ab__vipUser col l-3 m-6 c-12">
+            <div class="ab__icon l-3">
+              <i class='bx bx-diamond'></i>
+            </div>
+            <div class="ab__text l-9">
+              <h3>Khách hàng VIP</h3>
+              <p>Ưu đãi dành cho khác hàng VIP</p>
+            </div>
           </div>
-          <div class="ab__text l-9">
-            <h3>Thanh toán COD</h3>
-            <p>Thanh toán khi nhận hàng (COD)</p>
-          </div>
-        </div>
-        <div class="ab__vipUser l-3 m-6 c-12">
-          <div class="ab__icon l-3">
-            <i class='bx bx-diamond'></i>
-          </div>
-          <div class="ab__text l-9">
-            <h3>Khách hàng VIP</h3>
-            <p>Ưu đãi dành cho khác hàng VIP</p>
-          </div>
-        </div>
-        <div class="ab__insu l-3 m-6 c-12">
-          <div class="ab__icon l-3">
-            <i class='bx bx-donate-heart'></i>
-          </div>
-          <div class="ab__text l-9">
-            <h3>Hỗ trợ bảo hành</h3>
-            <p>Đổi sửa đồ tại tất cả store</p>
+          <div class="ab__insu col l-3 m-6 c-12">
+            <div class="ab__icon l-3">
+              <i class='bx bx-donate-heart'></i>
+            </div>
+            <div class="ab__text l-9">
+              <h3>Hỗ trợ bảo hành</h3>
+              <p>Đổi sửa đồ tại tất cả store</p>
+            </div>
           </div>
         </div>
       </div>
@@ -270,15 +274,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="product">
-        <div class="new-product">
-          <div class="row">
             <div class="col l-3 m-6 c-12">
               <div class="pro__item">
                 <div class="pro__img1 bg-img" style="background-image: url(./images/products/product-11\ \(1\).jpg);">
@@ -443,14 +438,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="product">
-        <div class="popular-sell">
-          <div class="row">
             <div class="col l-3 m-6 c-12">
               <div class="pro__item">
                 <div class="pro__img1 bg-img" style="background-image: url(./images/products/product-07\ \(1\).jpg);">
@@ -523,14 +510,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="product">
-        <div class="new-product">
-          <div class="row">
             <div class="col l-3 m-6 c-12">
               <div class="pro__item">
                 <div class="pro__img1 bg-img" style="background-image: url(./images/products/product-11\ \(1\).jpg);">
@@ -612,52 +591,51 @@
   <!-- footer -->
   <div class="section">
     <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l-3 m-6 c-12">
-                    <div class="footer-item">
-                        <h3>Tổng Đài Hỗ Trợ</h3>
-                        <p>Liên hệ đặt hàng <span>0123456789</span></p>
-                        <p>Thắc mắc đơn hàng <span>0123456789</span></p>
-                        <p>Góp ý, khiếu nại <span>0123456789</span></p>
+      <div class="container">
+        <div class="row">
+          <div class="col l-3 m-6 c-12">
+            <div class="footer-item">
+              <h3>Tổng Đài Hỗ Trợ</h3>
+              <p>Liên hệ đặt hàng <span>0123456789</span></p>
+              <p>Thắc mắc đơn hàng <span>0123456789</span></p>
+              <p>Góp ý, khiếu nại <span>0123456789</span></p>
 
-                    </div>
-                </div>
-                <div class="col l-3 m-6 c-12">
-                    <div class="footer-item">
-                        <h3>Về YOLO</h3>
-                        <a href="">Giới thiệu</a>
-                        <a href="">Liên hệ </a>
-                        <a href="">Tuyển dụng</a>
-                        <a href="">Tin Tức</a>
-                        <a href="">Hệ thống cửa hàng</a>
-                    </div>
-                </div>
-                <div class="col l-3 m-6 c-12">
-                    <div class="footer-item">
-                        <h3>Chăm Sóc KHách Hàng</h3>
-                        <p>Chính sách đổi trả </p>
-                        <p>Chính sách bảo hành </p>
-                        <p>Chính sách hoàn tiền </p>
-                    </div>
-                </div>
-                <div class="col l-3 m-6 c-12">
-                    <div class="footer-item">
-                        <div class="footer-logo bg-img"
-                            style="background-image:url(./images/Logo-2.png);">
-                        </div>
-                        <p>Hướng đến mục tiêu mang lại niềm vui ăn mặc mới mỗi ngày cho hàng triệu người tiêu
-                            dùng Việt. Hãy cùng Yolo hướng đến một cuộc sống năng động, tich cực hơn
-                        </p>
-
-                    </div>
-                </div>
             </div>
+          </div>
+          <div class="col l-3 m-6 c-12">
+            <div class="footer-item">
+              <h3>Về YOLO</h3>
+              <a href="">Giới thiệu</a>
+              <a href="">Liên hệ </a>
+              <a href="">Tuyển dụng</a>
+              <a href="">Tin Tức</a>
+              <a href="">Hệ thống cửa hàng</a>
+            </div>
+          </div>
+          <div class="col l-3 m-6 c-12">
+            <div class="footer-item">
+              <h3>Chăm Sóc KHách Hàng</h3>
+              <p>Chính sách đổi trả </p>
+              <p>Chính sách bảo hành </p>
+              <p>Chính sách hoàn tiền </p>
+            </div>
+          </div>
+          <div class="col l-3 m-6 c-12">
+            <div class="footer-item">
+              <div class="footer-logo bg-img" style="background-image:url(./images/Logo-2.png);">
+              </div>
+              <p>Hướng đến mục tiêu mang lại niềm vui ăn mặc mới mỗi ngày cho hàng triệu người tiêu
+                dùng Việt. Hãy cùng Yolo hướng đến một cuộc sống năng động, tich cực hơn
+              </p>
+
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<!-- end footer -->
-</div>
+  </div>
+  <!-- end footer -->
+  </div>
 </body>
 
 </html>
