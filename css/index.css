@@ -58,6 +58,8 @@ a {
 
 .menu__mb-icon {
     display: none;
+    flex: 1;
+    /* cursor: pointer; */
 }
 
 .nav__logo {
@@ -67,54 +69,141 @@ a {
 .nav__icon i {
     float: right;
     margin-left: 10px;
+    font-size: 1.5rem;
 }
+
+
+/* slide */
 
 .slide {
+    overflow-x: auto;
+    overflow: hidden;
+    width: 600%;
     display: flex;
-    height: 700px;
-    margin-top: 70px;
 }
 
-.slide__pic {
-    position: relative;
+.slide input {
+    display: none;
 }
 
-.slide__slogan h1 {
-    font-size: 300%;
+.slide__box {
+    padding: 70px 0;
+    width: 20%;
+    display: flex;
+    transition: 2s;
+}
+
+.slide-intro-top input {
+    display: none;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+.slide__wraper {
+    min-width: 1350px;
+    max-width: 1366px;
+}
+
+.slide__slogan {
+    margin-top: 50px;
+}
+
+.slide__slogan h2 {
+    font-size: 3.1rem;
     color: #3c68b3;
 }
 
 .slide__slogan p {
-    width: 78%;
-    margin-top: 65px;
-    color: #919191;
+    color: gray;
+    margin: 50px 0;
+    line-height: 1.5rem;
 }
 
 .slide__slogan a {
-    background-color: #3c68b3;
-    font-size: 2rem;
-    padding: 0.8rem 1.6rem;
     position: relative;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    background-color: #3c68b3;
     color: white;
-    line-height: 3.2rem;
-    font-weight: 500;
+    line-height: 3.4rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
 }
 
-.view {
-    margin-top: 120px;
+.slide__slogan a:hover {
+    box-shadow: 0 0px 5px 1px rgba(99, 99, 99, 0.5);
+    transform: translateX(5px);
+}
+
+.slide__img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.img-bg {
+    margin-top: 1.2%;
+    position: absolute;
+    background-color: #3c68b3;
+    width: 50%;
+    height: 87%;
+    z-index: 89;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
 }
 
 .slide__pic img {
-    width: 100%;
     position: absolute;
-    margin-top: -180px;
+    z-index: 90;
+    height: 146%;
+    /* margin-left: -30%; */
+    margin-top: -102px;
 }
+
+.slide-control {
+    transition: .2s;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+.slide-control i {
+    cursor: pointer;
+    line-height: 1.2rem;
+    font-size: 1.8rem;
+}
+
+.slide-control i:hover,
+.slide-control i:active {
+    color: #3c68b3;
+}
+
+.slide-control .number {
+    display: flex;
+    user-select: none;
+}
+
+
+/* slide end */
 
 .about {
     /* display: flex; */
     width: 100%;
     /* flex-wrap: wrap; */
     /* justify-content: space-between; */
+    margin-top: 50px;
 }
 
 .ab__ship {
@@ -242,7 +331,6 @@ a {
 /* footer */
 
 .footer {
-    font-size: 1.3rem;
     box-shadow: 0px -3px 18px 0px rgb(99 99 99 / 50%);
     padding-bottom: 40px;
     width: 100%;
@@ -273,93 +361,94 @@ a {
     height: 50px;
 }
 
-input#stylebar {
-    display: none;
-}
-
-.menu-mobile {
-    left: calc(0px - var(--width-menu-mobile));
-    position: absolute;
-    width: var(--width-menu-mobile);
-    height: 200px;
-    font-size: 1.4rem;
-    background-color: var(--white-color);
-    margin-left: -30px;
-    top: -20px;
-    box-shadow: 0 8px 8px 0 rgba(99, 99, 99, 0.5);
-    transition: 0.7s ease-in-out;
-}
-
-.menu-mobile label {
-    position: absolute;
-    top: 10px;
-    right: 5px;
-}
-
-.menu-mobile i {
-    color: var(--primary-color);
-}
-
-.menu-mobile-link {
-    margin-top: 30px;
-    margin-left: 20px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    /* padding: 30px; */
-}
-
-.menu-mobile a {
-    line-height: 2.8rem;
-    display: block;
-}
-
-#stylebar:checked~.menu-mobile {
-    left: 0;
-}
-
-.menu-mobile-link a:hover {
-    margin-left: 10px;
-    color: var(--primary-color);
-    transition: 0.3s ease-in-out;
-}
-
 @media (max-width :1024px) and (min-width :741px) {
     .menu__mb-icon {
         display: block;
         font-size: 2rem;
     }
-    .menu__mb-icon:hover {}
     .nav__menu {
         width: 300px;
         margin: 0;
-    }
-    .nav__menu ul {
+        display: block;
+        /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+        /* z-index: 100; */
         position: absolute;
-        top: 70px;
+        top: 100px;
         left: 0;
-        /* right: 0; */
-        z-index: 10;
+        z-index: 100;
         margin-left: 30px;
         padding-right: 100px;
         background-color: #fff;
+        transition: all 0.5s ease;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
+    .nav__menu.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    /* .nav__menu ul {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: 100;
+        margin-left: 30px;
+        padding-right: 100px;
+        background-color: #fff;
+        transition: all 0.5s ease;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    } */
     .nav__menu li a {
         display: block;
     }
+    .img-bg {
+        margin-left: 110px;
+        width: 100%;
+    }
+    .slide__pic img {
+        margin-top: -146px;
+    }
+    .ab__vipUser {
+        margin-top: 20px;
+    }
+    .ab__insu {
+        margin-top: 20px;
+    }
+    .ab__ship {
+        margin-top: 20px;
+    }
+    .ab__pay {
+        margin-top: 20px;
+    }
+    /* .banner {
+        height: ;
+    } */
 }
 
 @media (max-width: 740px) {
     .menu__mb-icon {
         display: block;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .menu__mb-icon:hover {}
     .nav__menu {
         width: 300px;
         margin: 0;
+        display: block;
+        /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+        /* z-index: 100; */
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: 100;
+        margin-left: 30px;
+        padding-right: 100px;
+        background-color: #fff;
+        transition: all 0.5s ease;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
-    .nav__menu ul {
+    .nav__menu.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    /* .nav__menu ul {
         position: absolute;
         top: 70px;
         left: 0;
@@ -367,8 +456,26 @@ input#stylebar {
         z-index: 10;
         margin-left: 30px;
         background-color: #fff;
-    }
+    } */
     .nav__menu li a {
         display: block;
+    }
+    .nav__icon i {
+        font-size: 1rem;
+    }
+    .banner {
+        height: 120px;
+    }
+    .ab__vipUser {
+        margin-top: 20px;
+    }
+    .ab__insu {
+        margin-top: 20px;
+    }
+    .ab__ship {
+        margin-top: 20px;
+    }
+    .ab__pay {
+        margin-top: 20px;
     }
 }
