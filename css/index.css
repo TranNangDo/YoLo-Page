@@ -474,6 +474,7 @@ a {
     .slide__pic img {
         margin-left: -9%;
         margin-top: -695px;
+        height: 10%;
     }
     .img-bg {
         margin-left: -4%;
@@ -531,6 +532,7 @@ a {
     }
     .slide__pic img {
         margin-top: -689px;
+        height: 10%;
     }
     .ab__vipUser {
         margin-top: 20px;
