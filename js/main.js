@@ -25,19 +25,19 @@ slideControlLeft.onclick = () => {
     }
 }
 slideControlRight.onclick = () => {
-    numberActive.innerHTML = `<p class="number-active">${couter}</p>`;
-    document.getElementById('radio' + couter).checked = true;
-    couter += 1;
-    if (couter > 3) {
-        couter = 1;
+        numberActive.innerHTML = `<p class="number-active">${couter}</p>`;
+        document.getElementById('radio' + couter).checked = true;
+        couter += 1;
+        if (couter > 3) {
+            couter = 1;
+        }
     }
-}
-setInterval(() => {
-    document.getElementById('radio' + couter).checked = true;
+    // setInterval(() => {
+    //     document.getElementById('radio' + couter).checked = true;
 
-    ++couter;
-    numberActive.innerHTML = `<p class="number-active">${couter -   1 }</p>`;
-    if (couter > 3) {
-        couter = 1;
-    }
-}, 5000)
+//     ++couter;
+//     numberActive.innerHTML = `<p class="number-active">${couter -   1 }</p>`;
+//     if (couter > 3) {
+//         couter = 1;
+//     }
+// }, 5000)
